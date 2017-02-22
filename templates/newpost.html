@@ -7,14 +7,16 @@
 <form method="post">
     <label>
         <div>title</div>
-        <input type="text" name="title" value="{{title}}">
+        <input class="input" type="text" name="title" value="{{title}}">
     </label>
     <label>
         <div>post</div>
-        <textarea name="body">{{body}}</textarea>
+        <textarea class="input" name="body">{{body}}</textarea>
     </label>
-    <div class="error">{{ error }}</div>
-    <input type="submit">
+    {% if error != '' %}
+      <div class="error">{{ error }}</div>
+    {% endif %}  
+    <input class="submit" type="submit">
 </form>
 
 {% endblock %}

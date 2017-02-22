@@ -4,9 +4,9 @@
 
 <h1>blog users!</h1>
 
-<ul>
+<ul class="nav">
 {% for user in users %}
-<li><a href="/blog/{{ user.username }}">{{ user.username }}</a></li>
+<li class="list-item"><a href="/blog/{{ user.username }}">{{ user.username }}</a></li>
 {% endfor %}
 </ul>
 

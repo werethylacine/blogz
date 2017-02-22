@@ -8,33 +8,41 @@
         <tr>
             <td><label for="username">Username</label></td>
             <td>
-                <input name="username" type="text" value="{{ username }}">
-                <span class="error">{{ errors.username_error }}</span>
+                <input class="input" name="username" type="text" value="{{ username }}">
+                {% if errors.username_error %}
+                  <span class="error">{{ errors.username_error }}</span>
+                {% endif %}
             </td>
         </tr>
         <tr>
             <td><label for="password">Password</label></td>
             <td>
-                <input name="password" type="password">
-                <span class="error">{{ errors.password_error }}</span>
+                <input class="input" name="password" type="password">
+                {% if errors.password_error %}
+                  <span class="error">{{ errors.password_error }}</span>
+                {% endif %}
             </td>
         </tr>
         <tr>
             <td><label for="verify">Verify Password</label></td>
             <td>
-                <input name="verify" type="password">
-                <span class="error">{{ errors.verify_error }}</span>
+                <input class="input" name="verify" type="password">
+                {% if errors.verify_error %}
+                  <span class="error">{{ errors.verify_error }}</span>
+                {% endif %}
             </td>
         </tr>
         <tr>
             <td><label for="email">Email (optional)</label></td>
             <td>
-                <input name="email" type="email" value="{{ email }}">
-                <span class="error">{{ errors.email_error }}</span>
+                <input class="input" name="email" type="email" value="{{ email }}">
+                {% if errors.email_error %}
+                  <span class="error">{{ errors.email_error }}</span>
+                {% endif %}
             </td>
         </tr>
     </table>
-    <input type="submit">
+    <input class="submit" type="submit">
 </form>
 
 {% endblock %}
